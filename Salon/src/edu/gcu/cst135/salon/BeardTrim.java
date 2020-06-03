@@ -34,6 +34,6 @@ public class BeardTrim extends Grooming {
 	// TODO: OVERRIDE public int compareTo(Object o) { }
 	
 	public String toString() {
-		return "Service id = " + getServiceId() + " Price = $" + getPrice();
+		return "BeardTrim \tid = " + getServiceId() + " Price = $" + getPrice()+ " Length = " + getLength();
 	}
 }

@@ -26,7 +26,9 @@ public abstract class Grooming extends Service {
 	// Appropriate GETTER/SETTER for private attributes
 	// SETTERS can implement data logic and rules
 	// SETTERS can also be omitted to establish a final public attribute
-	
+	public double getLength() {
+		return this.length;
+	}
 	
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()
 	// TODO: OVERRIDE public String toString(){ }

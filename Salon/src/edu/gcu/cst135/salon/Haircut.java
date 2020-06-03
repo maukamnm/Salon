@@ -28,7 +28,8 @@ public class Haircut extends Grooming {
 	// TODO: OVERRIDE public boolean hashCode() { }
 	// TODO: OVERRIDE public boolean equals(Object o) { }
 	// TODO: OVERRIDE public int compareTo(Object o) { }	
+	
 	public String toString() {
-		return "Service id = " + getServiceId() + " Price = $" + getPrice();
+		return "Haircut \tid = " + getServiceId() + " Price = $" + getPrice() + " Length = " + getLength();
 	}
 }

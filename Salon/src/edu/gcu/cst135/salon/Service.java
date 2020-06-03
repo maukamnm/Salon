@@ -23,7 +23,7 @@ public abstract class Service {
 		serviceId = serviceCounter++;
 		this.price = price;
 	}
-	
+
 	
 	// Appropriate GETTER/SETTER for private attributes
 	// SETTERS can implement data logic and rules
