@@ -5,21 +5,36 @@ public class Product {
 
 	// Class level Attributes go here
 	// e.g. private int number;
-	// TODO: NEED TO DETERMINE ACCESS LEVEL
-	// TODO: NEED TO DETERMINE CONSTRUCTOR REQUIREMENTS
-	// TODO: NEED TO DETERMINE GETTERS/SETTERS
 	public String brand;
-	public double price;		
+	public String type;
+	public double price;
 	
+	
+	public Product(String brand, String type, double price) {
+		super();
+		this.brand = brand;
+		this.type = type;
+		this.price = price;
+	}
 	
 	// Appropriate GETTER/SETTER for private attributes
 	// SETTERS can implement data logic and rules
 	// SETTERS can also be omitted to establish a final public attribute
-	// TODO: OVERRIDE public String toString(){ }
-	// TODO: OVERRIDE public boolean hashCode() { }
-	// TODO: OVERRIDE public boolean equals(Object o) { }
-	// TODO: OVERRIDE public int compareTo(Object o) { }
-	
+	public String getBrand() {
+		return brand;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public double getPrice() {
+		return price;
+	}	
+
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()
-	
+	@Override
+	public String toString() {
+		return "Product [brand=" + brand + ", type=" + type + ", price=" + price + "]";
+	}
 }

@@ -8,18 +8,42 @@ public class Catalog {
 
 	// Class level Attributes go here
 	// e.g. private int number;
-	// TODO: NEED TO DETERMINE ACCESS LEVEL
-	// TODO: NEED TO DETERMINE CONSTRUCTOR REQUIREMENTS
-	// TODO: NEED TO DETERMINE GETTERS/SETTERS
 	public List<Product> products = new ArrayList<>();
 	
 	// Appropriate GETTER/SETTER for private attributes
-	// SETTERS can implement data logic and rules
-	// SETTERS can also be omitted to establish a final public attribute
+	public void setProducts() {
+		UserInterface.displayHeader("Add Product to Catalog");
+		String brand = UserInterface.getStringValue("Brand: ");
+		String type = UserInterface.getStringValue("Type: ");
+		double price = UserInterface.getDoubleValue("Cost: ",999.99);
+		products.add(new Product(brand, type, price));
+	}
+	
+	public void getProducts() {
+		Object [] options = products.toArray();
+		System.out.println(options.length);
+		UserInterface.displayIntMenu("Products",options);
+	}
+	
+	public void searchProducts() {
+		Object [] options = products.toArray();
+		System.out.println(options.length);
+		UserInterface.displayIntMenu("Products",options);
+	}
+	
+	public Product getProduct(String type) {
+		
+		ArrayList<Product> subProducts = new ArrayList<>();
+		for(Product prod : products) 
+			if(prod.getType().equals(type)) 
+				subProducts.add(prod);
+		
+		Object [] options = subProducts.toArray();
+		int option = UserInterface.displayIntMenu("Products",options);
+		return subProducts.get(option+1);
+
+	}
 	
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()
-	// TODO: OVERRIDE public String toString(){ }
-	// TODO: OVERRIDE public boolean hashCode() { }
-	// TODO: OVERRIDE public boolean equals(Object o) { }
-	// TODO: OVERRIDE public int compareTo(Object o) { }
+
 }

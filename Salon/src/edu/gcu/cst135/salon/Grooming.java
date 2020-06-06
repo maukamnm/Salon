@@ -7,9 +7,6 @@ public abstract class Grooming extends Service {
 
 	// Class level Attributes go here
 	// e.g. private int number;
-	// TODO: NEED TO DETERMINE ACCESS LEVEL
-	// TODO: NEED TO DETERMINE CONSTRUCTOR REQUIREMENTS
-	// TODO: NEED TO DETERMINE GETTERS/SETTERS
 	private ArrayList<Style> styles = new ArrayList<>();
 	private  Equipment equipment;
 	private double length;
@@ -23,6 +20,12 @@ public abstract class Grooming extends Service {
 		this.length = length;
 	}
 	
+	public Grooming(double price, double length, Product product) {
+		super(price);  // Makes an object parent class - Grooming
+		this.length = length;
+		products.add(product);
+	}
+	
 	// Appropriate GETTER/SETTER for private attributes
 	// SETTERS can implement data logic and rules
 	// SETTERS can also be omitted to establish a final public attribute
@@ -31,8 +34,4 @@ public abstract class Grooming extends Service {
 	}
 	
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()
-	// TODO: OVERRIDE public String toString(){ }
-	// TODO: OVERRIDE public boolean hashCode() { }
-	// TODO: OVERRIDE public boolean equals(Object o) { }
-	// TODO: OVERRIDE public int compareTo(Object o) { }
 }
