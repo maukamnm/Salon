@@ -1,4 +1,4 @@
-package edu.gcu.cst135.salon;
+package edu.gcu.cst135.salon.data;
 
 // Concrete class in the Grooming/Haircut family
 // The extends keyword makes this a child of Haircut
@@ -22,6 +22,6 @@ public class Haircut extends Grooming {
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()	
 	
 	public String toString() {
-		return "Haircut \tid = " + getServiceId() + " Price = $" + getPrice() + " Length = " + getLength();
+		return "Haircut|" + getServiceId() + "|" + getPrice() + "|" + getLength();
 	}
 }

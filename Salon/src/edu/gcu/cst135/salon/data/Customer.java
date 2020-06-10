@@ -1,4 +1,4 @@
-package edu.gcu.cst135.salon;
+package edu.gcu.cst135.salon.data;
 
 // An object that will interact with the Grooming class through the Salon class
 public class Customer {
