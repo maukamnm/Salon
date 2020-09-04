@@ -24,10 +24,8 @@ public class BeardTrim extends Grooming {
 	}
 
 	// Appropriate GETTER/SETTER for private attributes
-
-	
-	
 	// Data object override methods: toString(), hashCode(), equals(), compareTo()	
+	
 	public String toString() {
 		return "BeardTrim \tid = " + getServiceId() + " Price = $" + getPrice()+ " Length = " + getLength();
 	}
